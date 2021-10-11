@@ -1,0 +1,178 @@
+<header class=" z-30
+fixed
+w-full
+bg-white
+flex
+justify-between
+items-center
+px-4
+
+
+xl:px-36
+transition-all
+duration-200
+
+" :class="{'h-14 ': !scrolledFromTop, 'h-14': scrolledFromTop}">
+    <div class="flex flex-grow-0 ">
+        <a href="#" class="transition duration-200" :class="{'translate-x-full': !navOpen}"
+            :class="{'translate-x-0': navOpen}" 
+            >
+            <img src="./assets/img/logo/Logo.png" alt="Alternatif Press"
+                class="h-8 hidden md:block transition duration-200 mx-2"
+                />
+        </a>
+        <button class="" @click="navOpen = !navOpen" >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black mx-2 " fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" x-show="!navOpen">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black mx-2" viewBox="0 0 24 24"
+                stroke="currentColor" x-show="navOpen">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a class=" hidden md:block  self-center mx-2 hover:text-gray-500"  href="#" @click="navOpen = false">Popular </a>
+        <a class="  hidden md:block self-center mx-2 hover:text-gray-500"  href="#" @click="navOpen = false"> Terkini </a>
+
+    </div>
+    <div x-show="navOpen" class="bg-white absolute inset-x-0 transform              w-full
+z-50" :class="{'h-14 top-12 md:top-40': !scrolledFromTop, 'top-12 md:top-12': scrolledFromTop}"
+x-transition:enter="transition ease-out duration-200"
+x-transition:enter-start="opacity-0 transform scale-90"
+x-transition:enter-end="opacity-100 transform scale-100"
+x-transition:leave="transition ease-in duration-150"
+x-transition:leave-start="opacity-100 transform scale-100"
+x-transition:leave-end="opacity-0 transform scale-90"
+       >
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-24 bg-white ">
+            <div class="xl:grid xl:grid-cols-2 xl:gap-8 bg-white">
+                <div class=" grid grid-col md:grid-cols-2 gap-8 xl:mt-0 xl:col-span-2 bg-white">
+                    <div class=" grid  grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-sm font-medium text-red-600 tracking-wider uppercase">
+                                Bahagian
+                            </h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        BUDAYA & SASTERA
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        JELAJAH & GASTRO
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        KESIHATAN
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        MASYARAKAT
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        SAINS & TEKNOLOGI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        ISTIMEWA
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        LAIN-LAIN
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=" md:mt-0">
+                            <h3 class="text-sm font-medium text-red-600 tracking-wider uppercase">
+                                ALTERNATIF
+                            </h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        Utama
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        Tentang Kami
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        Guides
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                                        Hubungi Kami
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="hidden md:grid md:grid-cols-1 md:gap-8">
+                        <div class=" w-full">
+                            <div class="flex flex-col-reverse md:flex-row justify-between   ">
+                                <div class="">
+                                  <h3 class="text-sm font-medium text-red-600 tracking-wider uppercase">
+                                    HARIAN
+                                </h3>
+                                  <h2 class="text-3xl font-bodoni-std">Maknawi Seni
+                                  </h2>
+                                  <h3 class=" text-lg font-myriad text-gray-800 my-4">“Jadi anda mengatakan setelah mencipta alam ini, Tuhan cuma‘memikirkan’
+                                    kebesarannya sahaja. Adakah anda
+                                    </h2>
+                        
+                                  <h3 class="font-myriad text-sm">RIZUAN ABDUL AHMID, 02 MAR 2021</h2>
+                                </div>
+                                <img class="object-cover h-36 md:h-56 w-auto"
+                                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80"
+                                  alt="">
+                              </div>
+                        </div>
+           
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="grid justify-items-center" :class="{'scale-100': !scrolledFromTop, '-translate-y-16': scrolledFromTop}">
+        <!-- <a href="#">
+            <img src="./assets/img/logo/Logo.png" alt="Alternatif Press"
+                class="h-48 hidden md:block transform origin-left transition duration-200"
+                :class="{'scale-100': !scrolledFromTop, '-translate-y-28': scrolledFromTop}" />
+        </a> -->
+        <a href="#">
+            <img src="./assets/img/logo/LogoWord.png" alt="Alternatif Press" 
+                class=" h-12 transform origin-left transition duration-200"
+                :class="{'hidden md:block': navOpen,'block': !navOpen}" />
+        </a>
+    </div>
+    <div class="flex">
+     
+        <a 
+        class="  md:block  self-center mx-2 hover:text-gray-500" @click="navOpen = false"  :class="{' hidden md:block': !navOpen,'block': navOpen}" href="#">Daftar Masuk </a>
+        <button type="button" :class="{' hidden md:block': !navOpen,'block': navOpen}" 
+            class="   mx-2 md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">
+            Langgan</button>
+
+    </div>
+</header>
