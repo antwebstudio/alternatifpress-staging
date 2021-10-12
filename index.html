@@ -47,7 +47,6 @@
       'overflow-hidden': navOpen,
       'overflow-hidden': !navOpen
       }" class="relative overflow-hidden">
-  
   <header class=" z-30
 fixed
 w-full
@@ -62,16 +61,16 @@ xl:px-36
 transition-all
 duration-200
 
-" :class="{'h-14 ': !scrolledFromTop, 'h-14': scrolledFromTop}">
+" :class="{'h-14 md:h-64': !scrolledFromTop, 'h-14': scrolledFromTop}">
     <div class="flex flex-grow-0 ">
-        <a href="#" class="transition duration-200" :class="{'translate-x-full': !navOpen}"
+        <a href="#" class="transition duration-200" x-show="scrolledFromTop" :class="{'translate-x-full': !navOpen}"
             :class="{'translate-x-0': navOpen}" 
             >
             <img src="./assets/img/logo/Logo.png" alt="Alternatif Press"
                 class="h-8 hidden md:block transition duration-200 mx-2"
-                />
+                :class="{'scale-0': !scrolledFromTop, 'scale-100': scrolledFromTop}" />
         </a>
-        <button class="" @click="navOpen = !navOpen" >
+        <button class="" @click="navOpen = !navOpen" :class="{'md:pl-11': !scrolledFromTop, '': scrolledFromTop}">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black mx-2 " fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" x-show="!navOpen">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -205,15 +204,15 @@ x-transition:leave-end="opacity-0 transform scale-90"
         </div>
     </div>
     <div class="grid justify-items-center" :class="{'scale-100': !scrolledFromTop, '-translate-y-16': scrolledFromTop}">
-        <!-- <a href="#">
+        <a href="#">
             <img src="./assets/img/logo/Logo.png" alt="Alternatif Press"
                 class="h-48 hidden md:block transform origin-left transition duration-200"
                 :class="{'scale-100': !scrolledFromTop, '-translate-y-28': scrolledFromTop}" />
-        </a> -->
+        </a>
         <a href="#">
             <img src="./assets/img/logo/LogoWord.png" alt="Alternatif Press" 
                 class=" h-12 transform origin-left transition duration-200"
-                :class="{'hidden md:block': navOpen,'block': !navOpen}" />
+                :class="{'scale-100': !scrolledFromTop, 'md:-translate-y-24': scrolledFromTop, 'hidden md:block': navOpen,'block': !navOpen}" />
         </a>
     </div>
     <div class="flex">
@@ -226,6 +225,7 @@ x-transition:leave-end="opacity-0 transform scale-90"
 
     </div>
 </header>
+  
 
   <div class="relative  bg-white overflow-hidden  transition-all z-10
   duration-200" :class="{' pt-16 md:pt-72': !scrolledFromTop, 'pt-16 md:pt-64': scrolledFromTop}">
